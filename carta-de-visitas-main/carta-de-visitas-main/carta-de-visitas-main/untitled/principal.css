@@ -1,0 +1,12 @@
+p,h1 {color:#8B004B;}
+#paragrafo2{color:purple}
+
+/*table hearder, cabeçalho*/
+th{background-color: lightgrey}
+
+linha-cinza{background-color: lightgrey}
+
+verdes{color:darkgreen}
+
+/*seletor de pseudoclasse*/
+a:hover{background-color: darkblue;color:white}
