@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo media query</title>
+   <style>
+    /*tela maior de 600px*/
+    body {
+            background-color: #decff3;
+}
+    h1{
+        font-size: 24pt;
+    }
+    p {
+        font-size: 18pt;
+    }
+    .container {
+            display: flex;
+            flex-direction: row;
+        }
+    .item {
+        margin: 5px;
+        padding: 5px;
+        width: 200px;
+        border: 3px solid #3e3e3e;
+        background-color: #ffffff;
+    }
+                /* para telas*/
+                @media (max-width: 600px) {
+                    body {
+                        background-color: #50e8e8;
+                    }
+
+                    h1 {
+                        font-size: 36pt;
+                    }
+
+                    p {
+                        font-size: 28pt;
+                    }
+
+                    .container {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+    </style>
+
+</head>
+<body>
+<h1>Media query exemplo</h1>
+<p> Essa pagina é um exemplo de media query.</p>
+
+<div class="container">
+    <div class="item"><p> ola mundo</p></div>
+    <div class="item"><p> ola terra</p></div>
+</div>
+
+</body>
+</html>
