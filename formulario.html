@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>formularios</title>
+
+</head>
+<body>
+<h1>formularios</h1>
+<p>aula sobre formulaios  html</p>
+<form id="form">
+    <label for="nome">nome</label>
+    <br/>
+  <input
+        type="text"
+        id="nome"
+        name="nome"
+        placeholder="Digite seu nome"
+        required>
+  <br/>
+  <br/>
+    <label for="senha">senha</label>
+    <br/>
+    <input
+            type="password"
+            id="senha"
+            name="senha"
+            placeholder="Digite sua senha"
+            required>
+    <br/>
+    <br/>
+    <input id="enviar" type="submit" value="enviar">
+</form>
+</body>
+<script type="application/javascript">
+    function dizer_ola(event) {
+        event.preventDefault();
+        let nome = document.getElementById('nome').value;
+        let senha = document.getElementById('senha').value;
+        alert('Olá ' + nome + '! sua senha: ' + senha );
+}
+document
+    .getElementById('form')
+    .addEventListener('submit', dizer_ola);
+</script>
+</html>
+
+<p>Qual sua cor favorita:</p>
+
+<form>
+    <input type="radio" id="Azul" name="fav_language" value="HTML">
+    <label for="Azul">Azul</label><br>
+    <input type="radio" id="Rosa" name="fav_language" value="rosa">
+    <label for="rosa">rosa</label><br>
+    <input type="radio" id="Amarelo" name="fav_language" value="JavaScript">
+    <label for="Amarelo">Amarelo</label><br>
+</form>
+</body>
