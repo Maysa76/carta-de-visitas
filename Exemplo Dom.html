@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exmplo Dom</title>
+    <style>
+        body{
+            font-family: arial, sans-serif;
+            background-color: white;
+            color: black;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+<h1>tema escuro</h1>
+
+<p> clique no botao abaixo para trocar o tema.</p>
+
+    <button id= "botao-tema">
+        troca tema
+        </button>
+    </body>
+
+
+<body>
+<script>
+    let tema_claro= true;   //comeca com valor verdadeiro (true)
+
+    function trocartema() {
+        tema_claro = !tema_claro;   //troca de true para false e de false para true
+        if (tema_claro) {
+            document.body.style.backgroundColor = '#fff'; // plano de fundo branco
+            document.body.style.color = '#222'; // cor do texto preta
+
+        } else { //senao, se é tema escuro
+
+            document.body.style.backgroundColor = '#222';// cor fundo
+            document.body.style.color = '#fff';// cor do texto branco
+        }
+    }
+        document.getElementById('botao-tema').addEventListener('click', trocartema);
+</script>
+</body>
+</html>
+
+<body>
+<p> use o botao a baixo para abrir a imagem </p>
+<button id = "toggle"></button>
+<br/>
+<br/>
+<img alt="cravo flor " id="imagem" src="https://casadeflores.com.br/wp-content/uploads/2022/06/IMG_3666.jpeg">
+</body>
+<script>
+    let button = document.getElementById('toggle');
+
+    function toggleHide() {
+        //seleciona a imagem usando seu id
+        let imagem = document.getElementById('imagem' );
+        if (imagem.style.display === 'none') {
+            imagem.style.display = 'block';// mostra imagem
+            button.textContent = 'esconder';// trocar texto do botao
+        }else{ // se a imagem estiver visivel
+            imagem.style.display = 'none'; // esconder a imagem
+            button.textContent = 'Mostrar'; // troca o texto do botao
+
+        }
+    }
+        button.addEventListener('click', toggleHide);
+
+    </script>
+
+
+<body>
+
+<p> uma imagem maior e outras 3 pequenas.</p>
+
+<img id='img_principal'
+src='https://cdn.pixabay.com/photo/2020/01/19/05/07/flowers-4776851_1280.jpg'
+width='370px'
+>
+<br/>
+<br/>
+<img src="https://cdn.pixabay.com/photo/2020/01/19/05/07/flowers-4776851_1280.jpg" class="menor" width="120px">
+<img src="https://i.pinimg.com/236x/64/f9/c9/64f9c936c14c4c47fd2f94ae2dad54eb.jpg" class="menor" height="200px">
+<img src="https://i.pinimg.com/originals/ec/e1/25/ece125a476a65119ca410b28be0a99bc.jpg" class="menor" height="200px" width="200px" >
+</body>
+<script>
+
+    let pricipal = document.getElementById('img_principal'); // 1 elemento
+    let imagen = document.getElementById('menor'); //array com 3 elementos
+
+    for(let i = 0; i < pricipal.length; i++){
+        imagen.src = document[i].src;
+    }
